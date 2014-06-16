@@ -1,0 +1,15 @@
+<h1>Plays and Theaters</h1>
+
+<% @plays.each do |play| %>
+  <h2><%= play.title %></h2>
+  <h2><%= play.theater %></h2>
+  <p><%= play.description %></p>
+  <%= link_to 'Theater', theater_path %>
+<% end %>
+
+<% @theaters.each do |theater| %>
+  <h2><%= theater.name %></h2>
+  <h2><%= theater.location %></h2>
+  <p><%= theater.hour %></p>
+  <%= link_to 'Play', theater_path %>
+<% end %>

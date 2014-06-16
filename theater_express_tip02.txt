@@ -1,0 +1,13 @@
+class Theater < ActiveRecord::Base
+  has_many :plays
+end
+
+class Play < Active Record::Base
+  belongs_to :theater
+end
+
+create_table :play do |t|
+  t.belongs_to :theater
+  t.integer: theater_id
+# these two lines are the same
+end
