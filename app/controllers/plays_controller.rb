@@ -1,5 +1,5 @@
 class PlaysController < ApplicationController
-  before_action :find_theater
+  # before_action :find_play
 
   def index
     @plays = Play.all
@@ -10,7 +10,7 @@ class PlaysController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @play = Play.new
   end
 
   def edit
@@ -18,8 +18,8 @@ class PlaysController < ApplicationController
 
   private
 
-  def find_theater
-    @theater = Theater.find(params[:theater_id])
-  end
+  # def find_play
+  #   @play = Play.find(params[:play_id])
+  # end
 
 end

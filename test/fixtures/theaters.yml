@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  url: MyString
+  telephone_number: MyString
+  location: MyString
+  business_hour: 2014-06-16 14:18:06
+
+two:
+  name: MyString
+  url: MyString
+  telephone_number: MyString
+  location: MyString
+  business_hour: 2014-06-16 14:18:06

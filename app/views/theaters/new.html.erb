@@ -1,2 +1,36 @@
-<h1>Theaters#new</h1>
-<p>Find me in app/views/theaters/new.html.erb</p>
+<h1>Add theaters</h1>
+
+<%= form_for(@theater) do |f| %>
+
+<div>
+  <%= f.label(:name, 'Theater name') %>
+  <%= f.text_field(:name) %>
+</div>
+
+<div>
+  <%= f.label(:url, 'Website Address') %>
+  <%= f.text_field(:url) %>
+</div>
+
+<div>
+  <%= f.label(:telephone_number, 'Phone') %>
+  <%= f.text_field(:telephone_number) %>
+</div>
+
+<div>
+  <%= f.label(:location, 'Location') %>
+  <%= f.text_field(:location) %>
+</div>
+
+<div>
+  <%= f.label(:business_hour, 'Business Hour') %>
+  <%= f.text_field(:business_hour) %>
+</div>
+
+<div>
+    <%= f.submit('Save Theater') %>
+</div>
+
+<% end %>
+
+<%= link_to "<<Back to Main", theaters_path %>

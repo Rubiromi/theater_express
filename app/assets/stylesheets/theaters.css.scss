@@ -1,3 +1,57 @@
 // Place all the styles related to the Theaters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #BCF46E;
+  font-family: 'Helvetica neue';
+}
+
+#wrap {
+  width: 680px;
+  background-color: #80E800;
+  padding: 20px 20px 60px 35px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+nav {
+  color: white;
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+}
+
+h3 {
+  color: #D8D8D8;
+}
+
+li {
+  background-color: rgba(12,84,7,0.2);
+  border-radius: 3px;
+  padding: 3px 10px 3px 15px;
+  margin: 5px;
+
+}
+
+footer {
+  color: gray;
+  // text-align: center;
+  border-top: 1px solid gray;
+  font-size: 12px;
+  width: 670px;
+}

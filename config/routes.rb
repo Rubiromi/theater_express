@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'theaters/index'
+  resources :theaters
 
-  get 'theaters/show'
-
-  get 'theaters/new'
-
-  root to: 'theater#index'
+  root 'theaters#index'
 
   resources :theaters do
     resources :plays

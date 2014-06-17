@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616175745) do
+ActiveRecord::Schema.define(version: 20140616201806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,23 @@ ActiveRecord::Schema.define(version: 20140616175745) do
     t.datetime "end_date"
     t.datetime "time"
     t.integer  "price"
-    t.boolean  "on_theater"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "plays_theaters", id: false, force: true do |t|
+    t.integer "theater_id"
+    t.integer "play_id"
+  end
+
+  add_index "plays_theaters", ["theater_id", "play_id"], name: "index_plays_theaters_on_theater_id_and_play_id", using: :btree
+
+  create_table "theaters", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "telephone_number"
+    t.string   "location"
+    t.string   "business_hour"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
