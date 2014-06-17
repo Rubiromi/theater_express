@@ -6,16 +6,16 @@ show five theaters, but I don't know how. -->
 <ul>
   <% @theaters.each do |theater| %>
   <li>
-    <h3> <%= theater.name %> </h3>
+    <h3><%= link_to theater.name, theater_plays_path(theater) %> </h3>
     <h3> <%= theater.location %> </h3>
     <%= theater.url %>
   </li>
   <% end %>
 </ul>
 
-<!-- <%# form_tag theater_path, :method => 'get' do %> -->
+<%= form_tag theaters_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
-<!-- <%# end %> -->
+<% end %>

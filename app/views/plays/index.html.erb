@@ -1,8 +1,8 @@
-<h1>Plays and Theaters</h1>
+<h1>Plays for <%= @theater.name %></h1>
 
-<% @plays.each do |play| %>
+<% @theater.plays.each do |play| %>
   <h3><%= play.title %></h3>
-  <h3><%= play.theater %></h3>
   <p><%= play.description %></p>
-  <%= link_to 'Back to Main', theaters_path %>
 <% end %>
+
+<%= link_to 'Back to Main', theaters_path %>
